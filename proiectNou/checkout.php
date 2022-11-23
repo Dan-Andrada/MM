@@ -85,14 +85,14 @@ if(isset($_POST['order_btn'])){
             $total_price = ($fetch_cart['price'] * $fetch_cart['quantity']);
             $grand_total += $total_price;
    ?>
-   <p> <?php echo $fetch_cart['name']; ?> <span>(<?php echo '$'.$fetch_cart['price'].'/-'.' x '. $fetch_cart['quantity']; ?>)</span> </p>
+   <p> <?php echo $fetch_cart['name']; ?> <span>(<?php echo $fetch_cart['price'].'RON' .' x '. $fetch_cart['quantity']; ?>)</span> </p>
    <?php
       }
    }else{
       echo '<p class="empty">your cart is empty</p>';
    }
    ?>
-   <div class="grand-total"> grand total : <span>$<?php echo $grand_total; ?>/-</span> </div>
+   <div class="grand-total"> grand total : <span><?php echo $grand_total; ?> RON</span> </div>
 
 </section>
 
@@ -138,7 +138,7 @@ if(isset($_POST['order_btn'])){
             <input type="text" name="country" required placeholder="e.g. Romania">
          </div>
          <div class="inputBox">
-            <span>pin code :</span>
+            <span>postal code :</span>
             <input type="number" min="0" name="pin_code" required placeholder="e.g. 123456">
          </div>
       </div>
